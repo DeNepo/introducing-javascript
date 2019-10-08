@@ -8,8 +8,9 @@
   console.groupCollapsed(pageTitle);
 }
 
+// the shared main text
 const errorsText = `
-The JavaScript that you write in your .js files is really instructions for your computer.
+The code that you write in your .js files is really instructions for your computer.
 
 Just like when giving instructions to people, it's possible for you to write instructions the computer doesn't understand.
 
@@ -22,16 +23,24 @@ It will take a lot of DuckDucking and practice before you get the hang of fixing
 And you'll never stop making errors.  We all do it, remember how computers aren't so clever?
 `;
 
+
+// log the main text to the console with a specialized ending
+console.log(errorsText);
+
+
+// organize helpful resources in an object and log them to the console
+
+
+// append the main text to the DOM with a specialized ending
 const errorsTextArea = document.createElement('textArea');
 errorsTextArea.innerHTML = errorsText;
 errorsTextArea.id = 'errors-text';
 document.body.appendChild(errorsTextArea);
 document.body.appendChild(document.createElement('hr'));
 
-console.log(errorsText);
 
 
-
+// write a few JS snippets to study and append them to the dom as study links
 function invalidAssignmentToConst() {
 
   const constantVariable = 'forever!';
@@ -46,7 +55,7 @@ try {
   renderStudyLinks(invalidAssignmentToConst, err);
 }
 
-function cantAccessDeclarationBeforeInitialization() {
+function cantAccessVariableBeforeDeclaration() {
 
   // accessing a const/let variable before it is declared will error
   letVariable; // comment this line to remove the error!
@@ -55,9 +64,9 @@ function cantAccessDeclarationBeforeInitialization() {
 
 }
 try {
-  cantAccessDeclarationBeforeInitialization();
+  cantAccessVariableBeforeDeclaration();
 } catch (err) {
-  renderStudyLinks(cantAccessDeclarationBeforeInitialization, err);
+  renderStudyLinks(cantAccessVariableBeforeDeclaration, err);
 }
 
 

@@ -6,6 +6,7 @@
   console.groupCollapsed(pageTitle);
 }
 
+// the shared main text
 const variablesText = `
 Variables are a way for us as developers to understand and access what's in the computer's memory.
 
@@ -15,6 +16,21 @@ Since variables are how developers understand what's happening inside of your pr
 
 `;
 
+
+// log the main text to the console with a specialized ending
+const variablesConsoleEnding = `check out these resources to learn more:`;
+console.log(variablesText + variablesConsoleEnding);
+
+// organize helpful resources in an object and log them to the console
+const variablesResources = {
+  anIntroduction: 'https://javascript.info/variables',
+  const: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const',
+  let: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let',
+};
+console.table(variablesResources);
+
+
+// append the main text to the DOM with a specialized ending
 const variablesDomEnding = `for a quick intro to how variables work in JS, take a look at the examples below:`;
 const variablesTextArea = document.createElement('textArea');
 variablesTextArea.innerHTML = variablesText + variablesDomEnding;
@@ -22,18 +38,7 @@ variablesText.id = 'variables-text';
 document.body.appendChild(variablesTextArea);
 document.body.appendChild(document.createElement('hr'));
 
-
-const variablesConsoleEnding = `check out these resources to learn more:`;
-console.log(variablesText + variablesConsoleEnding);
-
-
-const variablesResources = {
-  constMDN: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const',
-  letMDN: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let',
-};
-console.table(variablesResources);
-
-
+// write a few JS snippets to study and append them to the dom as study links
 function letVariables() {
 
   // declaring a new "let" variable opens a new labeled slot in memory
