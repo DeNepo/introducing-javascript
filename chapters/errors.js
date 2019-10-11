@@ -9,8 +9,7 @@
 }
 
 // the shared main text
-const errorsText = `
-The code that you write in your .js files is really instructions for your computer.
+const errorsText = `The code that you write in your .js files is really instructions for your computer.
 
 Just like when giving instructions to people, it's possible for you to write instructions the computer doesn't understand.
 
@@ -25,15 +24,22 @@ And you'll never stop making errors.  We all do it, remember how computers aren'
 
 
 // log the main text to the console with a specialized ending
-console.log(errorsText);
+const errorsConsoleEnding = `check out these resources to learn more:`;
+console.log(errorsText + errorsConsoleEnding);
 
 
 // organize helpful resources in an object and log them to the console
-
+const errorsResources = {
+  programLifecycle: 'https://github.com/janke-learning/errors-and-life-cycle',
+  tryCatch: 'https://javascript.info/try-catch',
+  greatListOfErrors: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Errors'
+};
+console.table(errorsResources);
 
 // append the main text to the DOM with a specialized ending
+const errorsDomEnding = `Check out these JS Tutor links to study a few common errors:`;
 const errorsTextArea = document.createElement('textArea');
-errorsTextArea.innerHTML = errorsText;
+errorsTextArea.innerHTML = errorsText + errorsDomEnding;
 errorsTextArea.id = 'errors-text';
 document.body.appendChild(errorsTextArea);
 document.body.appendChild(document.createElement('hr'));
@@ -71,6 +77,12 @@ try {
 
 
 function isNotAFunction() {
+
+  function es5Function() { };
+  es5Function();
+
+  const es6Function = () => { };
+  es6Function();
 
   const aBooleanValue = true;
   aBooleanValue();

@@ -6,8 +6,7 @@
   console.groupCollapsed(pageTitle);
 }
 
-const devtoolsText = `
-this introduction to JS is written as a simple website (using JavaScript!) to introduce JS in it's natural context: live websites!
+const devtoolsText = `this introduction to JS is written as a simple website (using JavaScript!) to introduce JS in it's natural context: live websites!
 
 You can think of this like a JavaScript Immersion class.  Not only are you learning JS, but your study materials are written with it.
 
@@ -61,7 +60,6 @@ for (let browserName in openingBrowserConsole) {
 }
 
 
-document.body.appendChild(document.createElement('hr'));
 
 {
   document.body.appendChild(document.createElement('hr'));

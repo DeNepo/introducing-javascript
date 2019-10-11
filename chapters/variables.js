@@ -7,8 +7,7 @@
 }
 
 // the shared main text
-const variablesText = `
-Variables are a way for us as developers to understand and access what's in the computer's memory.
+const variablesText = `Variables are a way for us as developers to understand and access what's in the computer's memory.
 
 You can call a variable almost anything you like, but it's very important that you don't.
 
@@ -26,6 +25,7 @@ const variablesResources = {
   anIntroduction: 'https://javascript.info/variables',
   const: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const',
   let: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let',
+  guoVideo: 'https://www.youtube.com/watch?v=pHt_tKYUgbo&list=PLzV58Zm8FuBJFfQN5il3ujx6FDAY8Ds3u&index=2'
 };
 console.table(variablesResources);
 
